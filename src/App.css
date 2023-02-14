@@ -46,6 +46,16 @@
   justify-content: space-around;
   list-style-type: none;
 }
+.navbar-flex > li {
+  padding: 10px 30px;
+  background-color: blueviolet;
+  border-radius: 20px;
+  cursor: pointer;
+  /* border: 1px solid red; */
+}
+.navbar-flex > li:hover {
+  background-color: rgb(164, 85, 238);
+}
 .link {
   text-decoration: none;
 }
@@ -59,7 +69,9 @@
 .pokemon-cards {
   width: 180px;
   height: 200px;
-  border: 1px solid red;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  padding-top: 20px;
 }
 .pokemon-cards > h3 {
   text-align: center;
@@ -69,7 +81,7 @@
   justify-content: center;
 }
 .pagination div {
-  padding-top: 10px;
+  padding-top: 40px;
   margin-right: 20px;
 }
 .pagination button {

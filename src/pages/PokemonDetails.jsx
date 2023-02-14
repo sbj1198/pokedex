@@ -13,6 +13,20 @@ export const PokemonDetails = () => {
       });
   };
 
+  const addToFav = () => {
+    let fav = JSON.parse(localStorage.getItem("fav")) || [];
+
+    if (fav.length !== 0) {
+      if (fav.find((e) => e.id !== pokemonDetails.id)) {
+        fav.push(pokemonDetails);
+        localStorage.setItem("fav", JSON.stringify(fav));
+      }
+    } else {
+      fav.push(pokemonDetails);
+      localStorage.setItem("fav", JSON.stringify(fav));
+    }
+  };
+
   useEffect(() => {
     getPokemonDetails();
   }, []);
@@ -30,7 +44,10 @@ export const PokemonDetails = () => {
         }}
       >
         <h3>{pokemonDetails.name}</h3>
-        <span style={{ paddingRight: "20px", cursor: "pointer" }}>
+        <span
+          style={{ paddingRight: "20px", cursor: "pointer" }}
+          onClick={addToFav}
+        >
           <img
             src="https://cdn-icons-png.flaticon.com/512/2550/2550223.png"
             alt=""

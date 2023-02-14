@@ -7,17 +7,17 @@ export const Navbar = () => {
     <div className="navbar">
       <ul className="navbar-flex">
         <li>
-          <Link to="/pokemon" className="link">
+          <Link to="/pokemon" className="link" style={{ color: "white" }}>
             Pokemon
           </Link>
         </li>
         <li>
-          <Link to="/types" className="link">
+          <Link to="/types" className="link" style={{ color: "white" }}>
             Types
           </Link>
         </li>
         <li>
-          <Link to="/favorites" className="link">
+          <Link to="/favorites" className="link" style={{ color: "white" }}>
             Favorites
           </Link>
         </li>
